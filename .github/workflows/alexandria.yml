@@ -16,9 +16,10 @@ on:
   # Trigger on pushes to the default branch
   push:
     branches:
-      - main
+      - develop 
     paths:
       - '.alexandria/views/**'
+      - '.github/workflows/alexandria.yml'
 
 jobs:
   register-alexandria:
