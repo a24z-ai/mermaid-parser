@@ -1,0 +1,109 @@
+{
+  "id": "creating-a-validation-only-mermaid-package",
+  "version": "1.0.0",
+  "name": "Creating a Validation-Only Mermaid Package",
+  "description": "Guide for creating a lightweight, validation-only version of Mermaid for server-side environments",
+  "rows": 2,
+  "cols": 3,
+  "cells": {
+    "0,0": {
+      "name": "Parser Core",
+      "description": "Core parsing functionality without rendering",
+      "coordinates": [0, 0],
+      "files": [
+        "packages/parser/src/parse.ts",
+        "packages/mermaid/src/mermaidAPI.ts",
+        "packages/mermaid/src/Diagram.ts",
+        "packages/mermaid/src/diagram-api/detectType.ts"
+      ]
+    },
+    "0,1": {
+      "name": "Diagram Parsers",
+      "description": "Individual diagram type parsers (JISON & Langium)",
+      "coordinates": [0, 1],
+      "files": [
+        "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+        "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "packages/mermaid/src/diagrams/user-journey/parser/journey.jison"
+      ]
+    },
+    "0,2": {
+      "name": "Langium Parsers",
+      "description": "New Langium-based parsers",
+      "coordinates": [0, 2],
+      "files": [
+        "packages/parser/src/language/gitGraph/module.ts",
+        "packages/parser/src/language/pie/module.ts",
+        "packages/parser/src/language/info/module.ts",
+        "packages/parser/src/language/packet/module.ts",
+        "packages/parser/src/language/architecture/module.ts"
+      ]
+    },
+    "1,0": {
+      "name": "Diagram Databases",
+      "description": "State management and data structures for each diagram type",
+      "coordinates": [1, 0],
+      "files": [
+        "packages/mermaid/src/diagrams/class/classDb.ts",
+        "packages/mermaid/src/diagrams/er/erDb.ts",
+        "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+        "packages/mermaid/src/diagrams/pie/pieDb.ts",
+        "packages/mermaid/src/diagrams/quadrant-chart/quadrantDb.ts",
+        "packages/mermaid/src/diagrams/requirement/requirementDb.ts",
+        "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+        "packages/mermaid/src/diagrams/state/stateDb.ts",
+        "packages/mermaid/src/diagrams/xychart/xychartDb.ts",
+        "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+        "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+        "packages/mermaid/src/diagrams/architecture/architectureDb.ts"
+      ]
+    },
+    "1,1": {
+      "name": "Build Configuration",
+      "description": "Build tools and configuration files for package creation",
+      "coordinates": [1, 1],
+      "files": [
+        "packages/mermaid/package.json",
+        "packages/parser/package.json",
+        "vite.config.ts",
+        "tsconfig.json",
+        "tsconfig.eslint.json"
+      ]
+    },
+    "1,2": {
+      "name": "Rendering Dependencies to Remove",
+      "description": "Files and dependencies that should be stubbed or removed",
+      "coordinates": [1, 2],
+      "files": [
+        "packages/mermaid/src/diagrams/flowchart/flowRenderer-v3-unified.ts",
+        "packages/mermaid/src/diagrams/class/classRenderer-v2.ts",
+        "packages/mermaid/src/diagrams/state/stateRenderer-v3-unified.ts",
+        "packages/mermaid/src/rendering-util/render.ts",
+        "packages/mermaid/src/dagre-wrapper/index.js"
+      ]
+    }
+  },
+  "overviewPath": "MERMAID_VALIDATION_ONLY_PACKAGE.md",
+  "category": "architecture",
+  "displayOrder": 0,
+  "timestamp": "2025-09-10T18:20:26.762Z",
+  "metadata": {
+    "generationType": "user",
+    "ui": {
+      "enabled": true,
+      "rows": 2,
+      "cols": 3,
+      "showCellLabels": true,
+      "cellLabelPosition": "top"
+    }
+  }
+}
