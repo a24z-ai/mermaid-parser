@@ -1,0 +1,71 @@
+{
+  "name": "@a24z/mermaid-parser",
+  "version": "1.0.1",
+  "description": "Lightweight Mermaid diagram validator for server-side environments - validation without rendering",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mermaid",
+    "validator",
+    "parser",
+    "diagram",
+    "syntax",
+    "flowchart",
+    "sequence",
+    "class",
+    "state",
+    "serverless",
+    "node",
+    "validation",
+    "lightweight"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/mermaid-parser",
+    "directory": "packages/a24z-mermaid-parser"
+  },
+  "homepage": "https://github.com/your-username/mermaid-parser/tree/main/packages/a24z-mermaid-parser#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/mermaid-parser/issues"
+  },
+  "author": "A24Z",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "test": "bun test",
+    "prepublishOnly": "bun run build",
+    "clean": "rm -rf dist",
+    "dev": "bun run scripts/build.ts --watch"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "bun-types": "^1.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {}
+}
